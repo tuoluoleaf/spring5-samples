@@ -15,6 +15,7 @@ public class JDKMeipo implements InvocationHandler {
     public Object getInstance(Object person) throws Exception {
         this.target = person;
         Class<?> clazz = target.getClass();
+
         return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), this);
     }
 
@@ -23,6 +24,7 @@ public class JDKMeipo implements InvocationHandler {
         before();
         Object obj = method.invoke(this.target, args);
         after();
+
         return obj;
     }
 

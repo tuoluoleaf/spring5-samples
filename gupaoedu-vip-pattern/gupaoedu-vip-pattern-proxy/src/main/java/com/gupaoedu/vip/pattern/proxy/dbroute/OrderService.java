@@ -12,6 +12,7 @@ public class OrderService implements IOrderService {
         orderDao = new OrderDao();
     }
 
+    @Override
     public int createOrder(Order order) {
         System.out.println("OrderService调用orderDao创建订单");
         return orderDao.insert(order);
