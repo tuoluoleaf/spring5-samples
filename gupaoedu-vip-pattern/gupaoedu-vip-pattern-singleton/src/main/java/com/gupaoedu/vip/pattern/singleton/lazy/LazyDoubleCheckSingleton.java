@@ -24,6 +24,4 @@ public class LazyDoubleCheckSingleton {
         }
         return lazy;
     }
-
-
 }
