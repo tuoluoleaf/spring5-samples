@@ -1,6 +1,8 @@
 package com.gupaoedu.vip.pattern.singleton.test;
 
 import com.gupaoedu.vip.pattern.singleton.lazy.LazyInnerClassSingleton;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.lang.reflect.Constructor;
 
@@ -31,5 +33,12 @@ public class LazyInnerClassSingletonTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void test1() {
+        LazyInnerClassSingleton lazyInnerClassSingleton = LazyInnerClassSingleton.getInstance();
+
+        Assert.assertNotNull(lazyInnerClassSingleton);
     }
 }
