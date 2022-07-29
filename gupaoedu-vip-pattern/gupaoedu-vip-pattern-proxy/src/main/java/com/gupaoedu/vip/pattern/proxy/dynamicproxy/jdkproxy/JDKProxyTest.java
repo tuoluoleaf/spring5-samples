@@ -14,9 +14,14 @@ public class JDKProxyTest {
     public static void main(String[] args) {
         try {
 
+            //通过反射，执行方法
             Object obj = new JDKMeipo().getInstance(new Girl());
             Method method = obj.getClass().getMethod("findLove", null);
             method.invoke(obj);
+
+            //强转成接口，执行方法
+            Person person = (Person) new JDKMeipo().getInstance(new Girl());
+            person.findLove();
 
 //            obj.findLove();
 
