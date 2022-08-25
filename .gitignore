@@ -8,5 +8,13 @@
 /dataSources.local.xml
 
 
-/.idea
+# MAC系统的配置
+.DS_Store
+# IDEA的配置
+.idea/
+target/
 *.iml
+# Git合并代码中间文件
+*.orig
+
+*.class
